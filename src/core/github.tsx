@@ -171,7 +171,7 @@ export async function pr_edit(args: EditPullRequestArgs) {
   // const actions = state.actions;
   // actions.debug(`github.pr_edit ${JSON.stringify(args)}`);
 
-  if (!args.base && !args.body) {
+  if (args.base === undefined && args.body === undefined) {
     return;
   }
 
